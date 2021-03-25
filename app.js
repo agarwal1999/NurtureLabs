@@ -12,7 +12,7 @@ app.use(express.json());
 
 const dbURL = process.env.DB_URL || 'mongodb://localhost:27017/nurtureDB'
 
-mongoose.connect(dbURl,{
+mongoose.connect(dbURL,{
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
