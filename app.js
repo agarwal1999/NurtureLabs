@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 const adminPage = require('./admin');
@@ -8,7 +10,9 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://admin-saurabh:Test123@cluster0.ztpke.mongodb.net/nurtureDB",{
+const dbURL = process.env.DB_URL || 'mongodb://localhost:27017/nurtureDB'
+
+mongoose.connect(dbURl,{
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
