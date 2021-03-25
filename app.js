@@ -8,7 +8,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost:27017/nurtureDB",{
+mongoose.connect("mongodb+srv://admin-saurabh:Test123@cluster0.ztpke.mongodb.net/nurtureDB",{
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
